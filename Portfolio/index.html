@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Portfolio of Daniel Adjetey Annan — Frontend Developer (React, JavaScript). Intern at Codveda." />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="wrap">
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="#" aria-label="Home">PERSONAL PORTFOLIO</a>
+
+        <button id="nav-toggle" class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
+          ☰
+        </button>
+
+        <nav id="primary-navigation" class="primary-nav" role="navigation" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://github.com/BykMoni" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section id="home" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-left">
+            <h1 class="intro">Hello, I'm <span class="accent">DANIEL ADJETEY ANNAN</span></h1>
+            <p class="lead">I build clean, modern websites and apps. Currently interning at Codveda - focused on frontend development (React) and full-stack projects.</p>
+
+            <div class="cta-row">
+              <a class="btn" href="#projects">View Projects</a>
+              <a class="btn secondary" href="https://github.com/BykMoni" target="_blank" rel="noopener">GitHub</a>
+            </div>
+
+            <p class="muted small" style="margin-top:.8rem">
+              Available for internships & junior roles - open to remote or hybrid opportunities.
+            </p>
+
+            <!-- Skills Section -->
+            <section id="skills" class="skills-section">
+              <h2 class="section-title accent">Skills</h2>
+
+              <div class="skills" aria-label="Skills">
+                <div class="skill-card">
+                  <div class="logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React logo"></div>
+                  <h4>Frontend</h4>
+                  <p>React, HTML5, CSS3, JavaScript, Vite, Responsive design</p>
+                </div>
+
+                <div class="skill-card">
+                  <div class="logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js logo"></div>
+                  <h4>Backend</h4>
+                  <p>Node.js, Express, REST APIs, MongoDB basics</p>
+                </div>
+
+                <div class="skill-card">
+                  <div class="logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP logo"></div>
+                  <h4>PHP / Laravel</h4>
+                  <p>Laravel (Blade), PHP - worked on LMS front-end + integration</p>
+                </div>
+
+                <div class="skill-card">
+                  <div class="logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress logo"></div>
+                  <h4>CMS</h4>
+                  <p>WordPress theme customization, plugin setup (Bookly), SEO basics</p>
+                </div>
+
+                <div class="skill-card">
+                  <div class="logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git logo"></div>
+                  <h4>Tools</h4>
+                  <p>Git, GitHub, VSCode, Chrome DevTools, Trello</p>
+                </div>
+
+                <div class="skill-card">
+                  <div class="logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 logo"></div>
+                  <h4>Styling</h4>
+                  <p>CSS3, Flexbox, Grid, Bootstrap, Animations, Accessibility (a11y)</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Experience (short preview) -->
+            <section id="experience" class="experience-preview" style="margin-top:1.2rem">
+              <h3 class="section-title">Recent Experience</h3>
+              <ul class="timeline-short">
+                <li>
+                  <strong>Intern - Npontu Technologies Ltd</strong>
+                  <div class="muted">April 15, 2025 - May 15, 2025</div>
+                  <p class="muted small" style="margin-top:.4rem">
+                    Worked on a Learning Management System (LMS) front-end and a WordPress healthcare website - implemented responsive dashboards, progress visualizations, appointment booking, and optimized performance & accessibility.
+                  </p>
+                </li>
+                <li style="margin-top:.6rem">
+                  <strong>Freelance Projects</strong>
+                  <div class="muted">2024</div>
+                  <p class="muted small" style="margin-top:.4rem">Built websites and UI components for local clients - emphasis on responsive design and accessibility.</p>
+                </li>
+              </ul>
+            </section>
+
+          </div>
+
+          <!-- Profile card (aside) -->
+          <aside class="profile-card" aria-labelledby="profile-heading">
+            <h2 id="profile-heading" class="visually-hidden">Profile</h2>
+            <div class="photo">
+              <img src="assets/profile.jpg" alt="Profile Photo of Daniel Adjetey Annan" width="140" height="140">
+            </div>
+            <div class="meta">
+              <div class="role muted">Frontend Developer • React • JavaScript</div>
+            </div>
+            <div class="profile-actions">
+              <a class="btn" href="mailto:daannan001@st.ug.edu.gh">Email Me</a>
+              <a class="btn secondary" href="#contact">Say Hi</a>
+            </div>
+            <div class="small muted" style="margin-top:.6rem; text-align:center">
+              Intern at Npontu Technologies (Apr 15 — May 15, 2025)
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="projects">
+        <div class="container">
+          <h2 class="section-title">Selected Projects</h2>
+          <p class="muted section-sub">Real projects from my internship and practice.</p>
+
+          <div class="grid cards-grid" role="list">
+            <!-- 1: LMS -->
+            <article class="card" role="listitem">
+              <h3>Learning Management System (LMS)</h3>
+              <p class="muted">Front-end work for an LMS built with Laravel and Blade. Implemented a responsive student dashboard, progress visualizations (Chart.js), course navigation, and assessment interfaces.</p>
+              <div class="tags"><span class="tag">Laravel</span><span class="tag">Blade</span><span class="tag">HTML</span><span class="tag">JS</span></div>
+              <div class="card-actions">
+              </div>
+            </article>
+
+            <!-- 2: Healthcare -->
+            <article class="card" role="listitem">
+              <h3>Healthcare Website (WordPress)</h3>
+              <p class="muted">Custom WordPress theme & plugin setup for a healthcare facility. Implemented appointment booking (Bookly), doctor profiles, SEO (Yoast), and responsive optimizations.</p>
+              <div class="tags"><span class="tag">WordPress</span><span class="tag">Bookly</span><span class="tag">SEO</span></div>
+              <div class="card-actions">
+              </div>
+            </article>
+
+            <!-- 3: Weather App (React) -->
+            <article class="card" role="listitem">
+              <h3>Weather App (React)</h3>
+              <p class="muted">React + Vite app consuming OpenWeatherMap API. Features: search by city, current conditions, temperature units, and 3-day forecast.</p>
+              <div class="tags"><span class="tag">React</span><span class="tag">API</span><span class="tag">Vite</span></div>
+              <div class="card-actions">
+              </div>
+            </article>
+
+            <!-- 4: Task Manager (MERN) -->
+            <article class="card" role="listitem">
+              <h3>Task Manager (Full-Stack)</h3>
+              <p class="muted">CRUD task manager with Express API, MongoDB, and React frontend. Features: add/update/delete tasks, mark complete, localStorage/session support.</p>
+              <div class="tags"><span class="tag">Node</span><span class="tag">Express</span><span class="tag">MongoDB</span></div>
+              <div class="card-actions">
+              </div>
+            </article>
+
+            <!-- 5: Portfolio -->
+            <article class="card" role="listitem">
+              <h3>Personal Portfolio</h3>
+              <p class="muted">This portfolio — responsive, accessible, and mobile-first. Built with plain HTML & CSS and progressively enhanced with JS.</p>
+              <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Accessibility</span></div>
+              <div class="card-actions">
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Full Experience section (expanded) -->
+      <section id="experience-full" class="section bg-soft" style="padding-top:1rem;">
+        <div class="container">
+          <h2 class="section-title">Experience & Projects (Detailed)</h2>
+
+          <article class="exp-detailed">
+            <h3>Npontu Technologies Ltd — Intern (Front-end)</h3>
+            <div class="muted">April 15, 2025 — May 15, 2025 • Tse Addo, Accra</div>
+            <ul class="muted" style="margin-top:.6rem">
+              <li>Contributed to a Learning Management System (LMS): redesigned the student dashboard, implemented progress visualizations with Chart.js, responsive layouts, and interactive course navigation.</li>
+              <li>Worked on a WordPress healthcare website: set up theme customization, appointment booking (Bookly), optimized images & performance, and implemented SEO best practices via Yoast.</li>
+              <li>Daily workflow: Agile stand-ups, Trello task tracking, code reviews, Git/GitHub collaboration, cross-browser testing and accessibility improvements.</li>
+            </ul>
+            <p class="muted small" style="margin-top:.6rem">Supervisor: Mr. Nana Banyin Ayeyi Djan — ndjan@npontu.com</p>
+          </article>
+
+          <article style="margin-top:1rem">
+            <h3>Freelance Projects (Selected)</h3>
+            <div class="muted">2024</div>
+            <p class="muted small" style="margin-top:.4rem">Delivered responsive websites and UI components for local clients — focused on pixel-perfect front-end implementations and usability improvements.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="contact">
+        <div class="container contact-inner">
+          <div class="contact-left">
+            <h2 class="section-title accent">Get in touch</h2>
+            <p class="muted">Want to collaborate or see my code? Reach me via email or check my GitHub.</p>
+            <p><strong>Email:</strong> <a href="mailto:daannan001@st.ug.edu.gh">daannan001@st.ug.edu.gh</a></p>
+            <a class="btn" href="mailto:daannan001@st.ug.edu.gh">Contact Me</a>
+          </div>
+
+          <aside class="contact-aside">
+            <div class="card glass">
+            <h4>Certificates</h4>
+            <p class="muted">
+                I just completed <strong>Deloitte Australia's Technology Virtual Experience</strong> on Forage.  
+                In the simulation I:
+                <ul style="margin-top:.4rem; padding-left:1.2rem;">
+                <li>Completed a job simulation involving development and coding</li>
+                <li>Wrote a proposal for creating a dashboard</li>
+                </ul>
+                <a class="link" href="https://www.theforage.com/simulations/deloitte-aultechnoloay-fzOw" target="_blank" rel="noopener">
+                View Certificate & Simulation
+                </a>
+            </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <p>© <span id="year"></span> DANIEL ADJETEY ANNAN • Built with HTML &amp; CSS • <span class="muted">Codveda Internship</span></p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Small JS: nav toggle + year -->
+  <script>
+    (function () {
+      const toggle = document.getElementById('nav-toggle');
+      const nav = document.getElementById('primary-navigation');
+      toggle?.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('open');
+      });
+
+      // Close mobile nav when link clicked
+      document.querySelectorAll('.primary-nav a').forEach(a => a.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggle?.setAttribute('aria-expanded', 'false');
+      }));
+
+      // set year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
