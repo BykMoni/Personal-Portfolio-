@@ -108,6 +108,60 @@ body{
   .skills{grid-template-columns:repeat(3,1fr)}
   .cards-grid{grid-template-columns:repeat(3,1fr)}
 }
+/* Compact dropdown nav (mobile) */
+@media (max-width: 719px) {
+  .nav-toggle { display: inline-block; z-index: 60; }
+
+  .primary-nav {
+    position: absolute;
+    top: 62px; 
+    right: 1.1rem; 
+    width: 220px; 
+    
+    background: var(--panel);
+    border-radius: 10px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 10px 30px rgba(2,6,23,0.45);
+    overflow: hidden;
+
+    /* collapsed state */
+    max-height: 0;
+    opacity: 0;
+    transition: max-height .28s ease, opacity .22s ease;
+    z-index: 55;
+  }
+
+  .primary-nav.open {
+    opacity: 1;
+  }
+
+  .primary-nav .nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    padding: .6rem;
+    margin: 0;
+  }
+
+  .primary-nav .nav-list li { list-style: none; }
+
+  .primary-nav .nav-list a {
+    display: block;
+    padding: .7rem .85rem;
+    border-radius: 8px;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .primary-nav .nav-list a:hover,
+  .primary-nav .nav-list a:focus {
+    background: rgba(255,255,255,0.03);
+    color: var(--text);
+  }
+
+  .site-header { position: relative; z-index: 60; }
+}
 
 /* Focus visible for keyboard users */
 :focus{outline:none}

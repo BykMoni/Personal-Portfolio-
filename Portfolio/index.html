@@ -257,23 +257,76 @@
   <!-- Small JS: nav toggle + year -->
   <script>
     (function () {
-      const toggle = document.getElementById('nav-toggle');
-      const nav = document.getElementById('primary-navigation');
-      toggle?.addEventListener('click', () => {
-        const expanded = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', String(!expanded));
-        nav.classList.toggle('open');
-      });
+    const toggle = document.getElementById('nav-toggle');
+    const nav = document.getElementById('primary-navigation');
 
-      // Close mobile nav when link clicked
-      document.querySelectorAll('.primary-nav a').forEach(a => a.addEventListener('click', () => {
+    if (!toggle || !nav) return;
+
+    // helper to open (calculates height)
+    function openNav() {
+        nav.classList.add('open');
+        toggle.setAttribute('aria-expanded', 'true');
+
+        // compute scroll height and set max-height inline for smooth transition
+        const fullHeight = nav.scrollHeight;
+        nav.style.maxHeight = fullHeight + 'px';
+        document.documentElement.classList.add('nav-open'); // optional body state
+    }
+
+    function closeNav() {
+        // set max-height to 0 to animate collapse
+        nav.style.maxHeight = nav.scrollHeight + 'px'; // set to current for transition start
+        // force reflow so transition triggers
+        void nav.offsetHeight;
+        nav.style.maxHeight = '0px';
+        toggle.setAttribute('aria-expanded', 'false');
+
+        // remove open class after animation completes
+        nav.addEventListener('transitionend', function handler(e) {
+        if (e.propertyName === 'max-height') {
+            nav.classList.remove('open');
+            nav.style.maxHeight = '';
+            document.documentElement.classList.remove('nav-open');
+            nav.removeEventListener('transitionend', handler);
+        }
+        });
+    }
+
+    toggle.addEventListener('click', (e) => {
+        const isOpen = nav.classList.contains('open');
+        if (isOpen) closeNav();
+        else openNav();
+    });
+
+    // close when a nav link is clicked (mobile)
+    document.querySelectorAll('.primary-nav .nav-list a').forEach(a => {
+        a.addEventListener('click', () => {
+        if (nav.classList.contains('open')) closeNav();
+        });
+    });
+
+    // close on outside click
+    document.addEventListener('click', (e) => {
+        if (!nav.classList.contains('open')) return;
+        const isInside = nav.contains(e.target) || toggle.contains(e.target);
+        if (!isInside) closeNav();
+    });
+
+    // close on Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && nav.classList.contains('open')) closeNav();
+    });
+
+    // Make sure nav is collapsed on resize back to desktop to avoid stuck state
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 720 && nav.classList.contains('open')) {
+        // immediate reset
         nav.classList.remove('open');
-        toggle?.setAttribute('aria-expanded', 'false');
-      }));
-
-      // set year
-      document.getElementById('year').textContent = new Date().getFullYear();
+        nav.style.maxHeight = '';
+        toggle.setAttribute('aria-expanded', 'false');
+        }
+    });
     })();
-  </script>
+</script>
 </body>
 </html>
